@@ -8,6 +8,7 @@ const {routeHome}=require("./route/homePageRoute/homeRoute");
 const {routeAdmin}=require("./route/AdminRoute/adminRoute");
 const {routeStudent}=require("./route/StudentRoute/routeStudent");
 const {routeExam}=require("./route/ExamResultRoute/examRoute");
+const port=process.env.PORT||8080;
 app.use(morgan("tiny"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
@@ -26,8 +27,8 @@ app.use(errorPage);
 mongoose.connect(databaseurl).then(()=>{
   
     console.log("Database Connection Successful");
-    app.listen(8080,()=>{
-        console.log("Server started");
+    app.listen(port,()=>{
+        console.log("Server started at port:"+port);
         })
 }).catch((error)=>{
     console.log("Error in connecting to database"+error);
