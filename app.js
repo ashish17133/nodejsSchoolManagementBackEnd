@@ -9,6 +9,21 @@ const {routeAdmin}=require("./route/AdminRoute/adminRoute");
 const {routeStudent}=require("./route/StudentRoute/routeStudent");
 const {routeExam}=require("./route/ExamResultRoute/examRoute");
 const port=process.env.PORT||8080;
+//security features
+const helmet=require("helmet");
+const cors=require("cors");
+const xssclean=require("xss-clean");
+const expressRate=require("express-rate-limit");
+const rate=expressRate({
+    windowMs:15*60*1000,
+    max:50
+})
+
+app.use(helmet());
+app.use(cors());
+app.use(xssclean());
+app.use(rate);
+//security features
 app.use(morgan("tiny"));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
