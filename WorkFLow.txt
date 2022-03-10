@@ -1,0 +1,48 @@
+//Admin Work Flow
+1.Register New Admin
+    .first name
+    .last name
+    .AdminId
+    .dob
+    .role(1-moderator,2-AdminHead)
+    .image
+    .password
+    .qualification
+    .phoneNumber,
+    .email
+2.Update Existing Admin
+3.Delete Existing Admin
+4.Forgot password(through Gmail Link)
+5.Read admin data with id
+
+//student Work Flow
+1.Register New Student
+    .studentId
+    .firstname
+    .lastName
+    .dob
+    .classLevel
+    .image//optional
+    .password
+    .createdAt(TimeStamp)
+    .address
+    .Parents name
+    .role-(monitor,student)
+    .emailId
+    .phoneNumber
+
+    
+
+2.Update Existing Student
+3.Delete Existing Student
+4.Forgot password get Link THorugh gmail
+5.get all student
+6.get student by id
+
+
+//Exam Result Work Flow
+1.Create Exam Table According to the student Id(register)/Update
+2.Read exam table all data
+3.Delete exam table
+4.
+
