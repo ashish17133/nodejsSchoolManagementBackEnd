@@ -12,8 +12,8 @@ const studentUpdate=async(req,res)=>{
         field=="firstName"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{firstName:value}):"";
         field=="lastName"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{lastName:value}):"";
         field=="dob"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{dob:value}):"";
-        field=="classLevel"?await studentSchema.findOneAndUpdate({studentId:req.parmas.id},{classLevel:value}):"";
-        field=="parentName"?await studentSchema.findOneAndUpdate({studentId:req.parmas.id},{parentName:value}):"";
+        field=="classLevel"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{classLevel:value}):"";
+        field=="parentName"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{parentName:value}):"";
         field=="role"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{role:value}):"";
         field=="email"?await studentSchema.findOneAndUpdate({studentId:req.parmas.id},{email:value}):"";
         field=="phoneNumber"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{phoneNumber:value}):"";
@@ -25,7 +25,7 @@ const studentUpdate=async(req,res)=>{
             return;
         }
     } catch (error) {
-        console.log("error in creating student"+error);
+        console.log("error in updating student"+error);
         res.status(400).json({"msg":"There is error in creating student"});
     }
 }
