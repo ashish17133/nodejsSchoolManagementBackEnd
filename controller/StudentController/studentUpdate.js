@@ -15,7 +15,7 @@ const studentUpdate=async(req,res)=>{
         field=="classLevel"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{classLevel:value}):"";
         field=="parentName"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{parentName:value}):"";
         field=="role"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{role:value}):"";
-        field=="email"?await studentSchema.findOneAndUpdate({studentId:req.parmas.id},{email:value}):"";
+        field=="email"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{email:value}):"";
         field=="phoneNumber"?await studentSchema.findOneAndUpdate({studentId:req.params.id},{phoneNumber:value}):"";
         tempData=await studentSchema.findOne({studentId:req.params.id}); 
 
