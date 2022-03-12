@@ -5,8 +5,8 @@ const {examResultGetAllById}=require("../../controller/ExamController/examReadAl
 const {examResultDeleteAllById}=require("../../controller/ExamController/examDeleteAllById");
 const {examResultDeleteSubjectById}=require("../../controller/ExamController/examDeleteSubjectById");
 routeExam.post("/register/:id",examResultRegister);
-routeExam.get("/getAll/:id",examResultGetAllById);
-routeExam.get("/deleteAll/:id",examResultDeleteAllById);
+routeExam.get("/get/:id",examResultGetAllById);
+routeExam.get("/delete/:id",examResultDeleteAllById);
 routeExam.get("/delete/subject/:id",examResultDeleteSubjectById);
 
 
